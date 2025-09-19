@@ -35,7 +35,7 @@ export default async function CccdDetailPage({ params }: Props) {
               <div className="flex h-full items-center justify-center text-sm opacity-60">Không có ảnh mặt trước</div>
             )}
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-black/[.08] dark:border-white/[.145] bg-black/5 dark:bg:white/10">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-md border border-black/[.08] dark:border-white/[.145] bg-black/5 dark:bg-white/10">
             {item.backImageUrl ? (
               <Image
                 src={item.backImageUrl}
