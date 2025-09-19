@@ -2,11 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { fetchCccdDetail } from "@/lib/api";
 
-type Props = { params: { id: string } };
-
 export const dynamic = "force-dynamic";
 
-export default async function CccdDetailPage({ params }: Props) {
+export default async function CccdDetailPage({ params }: { params: { id: string } }) {
   const { id } = params;
   const item = await fetchCccdDetail(id);
 
