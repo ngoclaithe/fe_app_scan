@@ -4,7 +4,8 @@ import { fetchCccdDetail } from "@/lib/api";
 
 export const dynamic = "force-dynamic";
 
-export default async function CccdDetailPage({ params }: { params: { id: string } }) {
+export default async function CccdDetailPage(props: Promise<{ params: { id: string } }>) {
+  const { params } = await props;
   const { id } = params;
   const item = await fetchCccdDetail(id);
 
